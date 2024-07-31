@@ -59,8 +59,8 @@ final class CAReactionSummaryLayer: CALayer {
         let iconLayer           = CALayer()
         iconLayer.contents      = $0.0.icon.cgImage
         iconLayer.masksToBounds = true
-        iconLayer.borderColor   = UIColor.white.cgColor
-        iconLayer.borderWidth   = 2
+        iconLayer.borderColor   = UIColor.clear.cgColor
+        iconLayer.borderWidth   = 0
         iconLayer.contentsScale = UIScreen.main.scale
 
         let textLayer           = CATextLayer()

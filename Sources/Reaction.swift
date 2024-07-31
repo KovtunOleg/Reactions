@@ -51,6 +51,9 @@ public struct Reaction {
    */
   public let alternativeIcon: UIImage?
 
+  /// Dictionary used to store some external data, f.e. needed for your domain.
+  public var extras: [String: Any]?
+
   /**
    Creates and returns a new reaction using the specified properties.
 
@@ -59,14 +62,16 @@ public struct Reaction {
    - Parameter color: The reaction's color.
    - Parameter icon: The reaction's icon image.
    - Parameter alternativeIcon: The reaction's alternative icon image.
+   - Parameter extras: Dictionary used to store some external data.
    - Returns: Newly initialized reaction with the specified properties.
    */
-  public init(id: String, title: String, color: UIColor, icon: UIImage, alternativeIcon: UIImage? = nil) {
+  public init(id: String, title: String, color: UIColor, icon: UIImage, alternativeIcon: UIImage? = nil, extras: [String: Any]? = nil) {
     self.id              = id
     self.title           = title
     self.color           = color
     self.icon            = icon
     self.alternativeIcon = alternativeIcon
+    self.extras = extras
   }
 }
 
